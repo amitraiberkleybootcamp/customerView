@@ -69,6 +69,7 @@ function runSearch() {
                   if (err) throw err;
                   console.log("Your order has been placed!");
                   console.log("Total cost: $" + (unitNum * chosenProduct.price));
+                  connection.end();
               })
           } else {
             console.log("Insufficient quantity. You tried....Maybe next time."); 
